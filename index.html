@@ -39,10 +39,10 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/CoberturadoSolo_4.js"></script>
-        <script src="data/APP_5.js"></script>
-        <script src="data/ReservaLegal_6.js"></script>
-        <script src="data/LimitesdasPropriedades_7.js"></script>
+        <script src="data/CoberturadoSolo_5.js"></script>
+        <script src="data/APP_6.js"></script>
+        <script src="data/ReservaLegal_7.js"></script>
+        <script src="data/LimitesdasPropriedades_8.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -61,7 +61,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-19.56264236864449,-48.316488518513125],[-18.92379088165048,-47.05898969663351]]);
+        }).fitBounds([[-19.737023851452395,-49.02036842689996],[-18.46082291673616,-46.50813502978342]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -167,34 +167,47 @@
         });
         layer_GoogleHybrid_0;
         map.addLayer(layer_GoogleHybrid_0);
-        map.createPane('pane_NDVIjul26_1');
-        map.getPane('pane_NDVIjul26_1').style.zIndex = 401;
-        var img_NDVIjul26_1 = 'data/NDVIjul26_1.png';
-        var img_bounds_NDVIjul26_1 = [[-19.559473530709955,-48.14038872914128],[-18.968679096481942,-47.811288218484925]];
-        var layer_NDVIjul26_1 = new L.imageOverlay(img_NDVIjul26_1,
-                                              img_bounds_NDVIjul26_1,
-                                              {pane: 'pane_NDVIjul26_1'});
-        bounds_group.addLayer(layer_NDVIjul26_1);
-        map.addLayer(layer_NDVIjul26_1);
-        map.createPane('pane_NDVIfev26_2');
-        map.getPane('pane_NDVIfev26_2').style.zIndex = 402;
-        var img_NDVIfev26_2 = 'data/NDVIfev26_2.png';
-        var img_bounds_NDVIfev26_2 = [[-19.559473531317344,-48.14038718819908],[-18.968767706192974,-47.811193034897265]];
-        var layer_NDVIfev26_2 = new L.imageOverlay(img_NDVIfev26_2,
-                                              img_bounds_NDVIfev26_2,
-                                              {pane: 'pane_NDVIfev26_2'});
-        bounds_group.addLayer(layer_NDVIfev26_2);
-        map.addLayer(layer_NDVIfev26_2);
-        map.createPane('pane_NDVInov25_3');
-        map.getPane('pane_NDVInov25_3').style.zIndex = 403;
-        var img_NDVInov25_3 = 'data/NDVInov25_3.png';
-        var img_bounds_NDVInov25_3 = [[-19.559562273302,-48.14029076894071],[-18.968856314655937,-47.811096076367605]];
-        var layer_NDVInov25_3 = new L.imageOverlay(img_NDVInov25_3,
-                                              img_bounds_NDVInov25_3,
-                                              {pane: 'pane_NDVInov25_3'});
-        bounds_group.addLayer(layer_NDVInov25_3);
-        map.addLayer(layer_NDVInov25_3);
-        function pop_CoberturadoSolo_4(feature, layer) {
+        map.createPane('pane_GoogleSatellite_1');
+        map.getPane('pane_GoogleSatellite_1').style.zIndex = 401;
+        var layer_GoogleSatellite_1 = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleSatellite_1',
+            opacity: 1.0,
+            attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 20
+        });
+        layer_GoogleSatellite_1;
+        map.addLayer(layer_GoogleSatellite_1);
+        map.createPane('pane_NDVIjul26_2');
+        map.getPane('pane_NDVIjul26_2').style.zIndex = 402;
+        var img_NDVIjul26_2 = 'data/NDVIjul26_2.png';
+        var img_bounds_NDVIjul26_2 = [[-19.559473530709955,-48.14038872914128],[-18.968679096481942,-47.811288218484925]];
+        var layer_NDVIjul26_2 = new L.imageOverlay(img_NDVIjul26_2,
+                                              img_bounds_NDVIjul26_2,
+                                              {pane: 'pane_NDVIjul26_2'});
+        bounds_group.addLayer(layer_NDVIjul26_2);
+        map.addLayer(layer_NDVIjul26_2);
+        map.createPane('pane_NDVIfev26_3');
+        map.getPane('pane_NDVIfev26_3').style.zIndex = 403;
+        var img_NDVIfev26_3 = 'data/NDVIfev26_3.png';
+        var img_bounds_NDVIfev26_3 = [[-19.559473531317344,-48.14038718819908],[-18.968767706192974,-47.811193034897265]];
+        var layer_NDVIfev26_3 = new L.imageOverlay(img_NDVIfev26_3,
+                                              img_bounds_NDVIfev26_3,
+                                              {pane: 'pane_NDVIfev26_3'});
+        bounds_group.addLayer(layer_NDVIfev26_3);
+        map.addLayer(layer_NDVIfev26_3);
+        map.createPane('pane_NDVInov25_4');
+        map.getPane('pane_NDVInov25_4').style.zIndex = 404;
+        var img_NDVInov25_4 = 'data/NDVInov25_4.png';
+        var img_bounds_NDVInov25_4 = [[-19.559562273302,-48.14029076894071],[-18.968856314655937,-47.811096076367605]];
+        var layer_NDVInov25_4 = new L.imageOverlay(img_NDVInov25_4,
+                                              img_bounds_NDVInov25_4,
+                                              {pane: 'pane_NDVInov25_4'});
+        bounds_group.addLayer(layer_NDVInov25_4);
+        map.addLayer(layer_NDVInov25_4);
+        function pop_CoberturadoSolo_5(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -229,11 +242,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_CoberturadoSolo_4_0(feature) {
+        function style_CoberturadoSolo_5_0(feature) {
             switch(String(feature.properties['tema'])) {
                 case 'Area Consolidada':
                     return {
-                pane: 'pane_CoberturadoSolo_4',
+                pane: 'pane_CoberturadoSolo_5',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -248,7 +261,7 @@
                     break;
                 case 'Area de Pousio':
                     return {
-                pane: 'pane_CoberturadoSolo_4',
+                pane: 'pane_CoberturadoSolo_5',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -263,7 +276,7 @@
                     break;
                 case 'Area Nao Classificada':
                     return {
-                pane: 'pane_CoberturadoSolo_4',
+                pane: 'pane_CoberturadoSolo_5',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -278,7 +291,7 @@
                     break;
                 case 'Remanescente de Vegetacao Nativa':
                     return {
-                pane: 'pane_CoberturadoSolo_4',
+                pane: 'pane_CoberturadoSolo_5',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -293,21 +306,21 @@
                     break;
             }
         }
-        map.createPane('pane_CoberturadoSolo_4');
-        map.getPane('pane_CoberturadoSolo_4').style.zIndex = 404;
-        map.getPane('pane_CoberturadoSolo_4').style['mix-blend-mode'] = 'normal';
-        var layer_CoberturadoSolo_4 = new L.geoJson(json_CoberturadoSolo_4, {
+        map.createPane('pane_CoberturadoSolo_5');
+        map.getPane('pane_CoberturadoSolo_5').style.zIndex = 405;
+        map.getPane('pane_CoberturadoSolo_5').style['mix-blend-mode'] = 'normal';
+        var layer_CoberturadoSolo_5 = new L.geoJson(json_CoberturadoSolo_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CoberturadoSolo_4',
-            layerName: 'layer_CoberturadoSolo_4',
-            pane: 'pane_CoberturadoSolo_4',
-            onEachFeature: pop_CoberturadoSolo_4,
-            style: style_CoberturadoSolo_4_0,
+            dataVar: 'json_CoberturadoSolo_5',
+            layerName: 'layer_CoberturadoSolo_5',
+            pane: 'pane_CoberturadoSolo_5',
+            onEachFeature: pop_CoberturadoSolo_5,
+            style: style_CoberturadoSolo_5_0,
         });
-        bounds_group.addLayer(layer_CoberturadoSolo_4);
-        map.addLayer(layer_CoberturadoSolo_4);
-        function pop_APP_5(feature, layer) {
+        bounds_group.addLayer(layer_CoberturadoSolo_5);
+        map.addLayer(layer_CoberturadoSolo_5);
+        function pop_APP_6(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -339,9 +352,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_APP_5_0() {
+        function style_APP_6_0() {
             return {
-                pane: 'pane_APP_5',
+                pane: 'pane_APP_6',
                 opacity: 1,
                 color: 'rgba(11,238,250,1.0)',
                 dashArray: '',
@@ -354,21 +367,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_APP_5');
-        map.getPane('pane_APP_5').style.zIndex = 405;
-        map.getPane('pane_APP_5').style['mix-blend-mode'] = 'normal';
-        var layer_APP_5 = new L.geoJson(json_APP_5, {
+        map.createPane('pane_APP_6');
+        map.getPane('pane_APP_6').style.zIndex = 406;
+        map.getPane('pane_APP_6').style['mix-blend-mode'] = 'normal';
+        var layer_APP_6 = new L.geoJson(json_APP_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_APP_5',
-            layerName: 'layer_APP_5',
-            pane: 'pane_APP_5',
-            onEachFeature: pop_APP_5,
-            style: style_APP_5_0,
+            dataVar: 'json_APP_6',
+            layerName: 'layer_APP_6',
+            pane: 'pane_APP_6',
+            onEachFeature: pop_APP_6,
+            style: style_APP_6_0,
         });
-        bounds_group.addLayer(layer_APP_5);
-        map.addLayer(layer_APP_5);
-        function pop_ReservaLegal_6(feature, layer) {
+        bounds_group.addLayer(layer_APP_6);
+        map.addLayer(layer_APP_6);
+        function pop_ReservaLegal_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -407,9 +420,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_ReservaLegal_6_0() {
+        function style_ReservaLegal_7_0() {
             return {
-                pane: 'pane_ReservaLegal_6',
+                pane: 'pane_ReservaLegal_7',
                 opacity: 1,
                 color: 'rgba(49,115,19,1.0)',
                 dashArray: '',
@@ -422,21 +435,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_ReservaLegal_6');
-        map.getPane('pane_ReservaLegal_6').style.zIndex = 406;
-        map.getPane('pane_ReservaLegal_6').style['mix-blend-mode'] = 'normal';
-        var layer_ReservaLegal_6 = new L.geoJson(json_ReservaLegal_6, {
+        map.createPane('pane_ReservaLegal_7');
+        map.getPane('pane_ReservaLegal_7').style.zIndex = 407;
+        map.getPane('pane_ReservaLegal_7').style['mix-blend-mode'] = 'normal';
+        var layer_ReservaLegal_7 = new L.geoJson(json_ReservaLegal_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_ReservaLegal_6',
-            layerName: 'layer_ReservaLegal_6',
-            pane: 'pane_ReservaLegal_6',
-            onEachFeature: pop_ReservaLegal_6,
-            style: style_ReservaLegal_6_0,
+            dataVar: 'json_ReservaLegal_7',
+            layerName: 'layer_ReservaLegal_7',
+            pane: 'pane_ReservaLegal_7',
+            onEachFeature: pop_ReservaLegal_7,
+            style: style_ReservaLegal_7_0,
         });
-        bounds_group.addLayer(layer_ReservaLegal_6);
-        map.addLayer(layer_ReservaLegal_6);
-        function pop_LimitesdasPropriedades_7(feature, layer) {
+        bounds_group.addLayer(layer_ReservaLegal_7);
+        map.addLayer(layer_ReservaLegal_7);
+        function pop_LimitesdasPropriedades_8(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -471,6 +484,14 @@
                         <th scope="row">Data CAR</th>\
                         <td>' + (feature.properties['Data CAR'] !== null ? autolinker.link(String(feature.properties['Data CAR']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">Area pgto</th>\
+                        <td>' + (feature.properties['Area pgto'] !== null ? autolinker.link(String(feature.properties['Area pgto']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Venc Contr</th>\
+                        <td>' + (feature.properties['Venc Contr'] !== null ? autolinker.link(String(feature.properties['Venc Contr']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -479,9 +500,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_LimitesdasPropriedades_7_0() {
+        function style_LimitesdasPropriedades_8_0() {
             return {
-                pane: 'pane_LimitesdasPropriedades_7',
+                pane: 'pane_LimitesdasPropriedades_8',
                 opacity: 1,
                 color: 'rgba(255,225,1,1.0)',
                 dashArray: '',
@@ -494,28 +515,29 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_LimitesdasPropriedades_7');
-        map.getPane('pane_LimitesdasPropriedades_7').style.zIndex = 407;
-        map.getPane('pane_LimitesdasPropriedades_7').style['mix-blend-mode'] = 'normal';
-        var layer_LimitesdasPropriedades_7 = new L.geoJson(json_LimitesdasPropriedades_7, {
+        map.createPane('pane_LimitesdasPropriedades_8');
+        map.getPane('pane_LimitesdasPropriedades_8').style.zIndex = 408;
+        map.getPane('pane_LimitesdasPropriedades_8').style['mix-blend-mode'] = 'normal';
+        var layer_LimitesdasPropriedades_8 = new L.geoJson(json_LimitesdasPropriedades_8, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_LimitesdasPropriedades_7',
-            layerName: 'layer_LimitesdasPropriedades_7',
-            pane: 'pane_LimitesdasPropriedades_7',
-            onEachFeature: pop_LimitesdasPropriedades_7,
-            style: style_LimitesdasPropriedades_7_0,
+            dataVar: 'json_LimitesdasPropriedades_8',
+            layerName: 'layer_LimitesdasPropriedades_8',
+            pane: 'pane_LimitesdasPropriedades_8',
+            onEachFeature: pop_LimitesdasPropriedades_8,
+            style: style_LimitesdasPropriedades_8_0,
         });
-        bounds_group.addLayer(layer_LimitesdasPropriedades_7);
-        map.addLayer(layer_LimitesdasPropriedades_7);
+        bounds_group.addLayer(layer_LimitesdasPropriedades_8);
+        map.addLayer(layer_LimitesdasPropriedades_8);
         var overlaysTree = [
-            {label: '<img src="legend/LimitesdasPropriedades_7.png" /> Limites das Propriedades', layer: layer_LimitesdasPropriedades_7},
-            {label: '<img src="legend/ReservaLegal_6.png" /> Reserva Legal', layer: layer_ReservaLegal_6},
-            {label: '<img src="legend/APP_5.png" /> APP', layer: layer_APP_5},
-            {label: 'Cobertura do Solo<br /><table><tr><td style="text-align: center;"><img src="legend/CoberturadoSolo_4_AreaConsolidada0.png" /></td><td>Area Consolidada</td></tr><tr><td style="text-align: center;"><img src="legend/CoberturadoSolo_4_AreadePousio1.png" /></td><td>Area de Pousio</td></tr><tr><td style="text-align: center;"><img src="legend/CoberturadoSolo_4_AreaNaoClassificada2.png" /></td><td>Area Nao Classificada</td></tr><tr><td style="text-align: center;"><img src="legend/CoberturadoSolo_4_RemanescentedeVegetacaoNativa3.png" /></td><td>Remanescente de Vegetacao Nativa</td></tr></table>', layer: layer_CoberturadoSolo_4},
-            {label: "NDVI nov25", layer: layer_NDVInov25_3},
-            {label: "NDVI fev26", layer: layer_NDVIfev26_2},
-            {label: "NDVI jul26", layer: layer_NDVIjul26_1},
+            {label: '<img src="legend/LimitesdasPropriedades_8.png" /> Limites das Propriedades', layer: layer_LimitesdasPropriedades_8},
+            {label: '<img src="legend/ReservaLegal_7.png" /> Reserva Legal', layer: layer_ReservaLegal_7},
+            {label: '<img src="legend/APP_6.png" /> APP', layer: layer_APP_6},
+            {label: 'Cobertura do Solo<br /><table><tr><td style="text-align: center;"><img src="legend/CoberturadoSolo_5_AreaConsolidada0.png" /></td><td>Area Consolidada</td></tr><tr><td style="text-align: center;"><img src="legend/CoberturadoSolo_5_AreadePousio1.png" /></td><td>Area de Pousio</td></tr><tr><td style="text-align: center;"><img src="legend/CoberturadoSolo_5_AreaNaoClassificada2.png" /></td><td>Area Nao Classificada</td></tr><tr><td style="text-align: center;"><img src="legend/CoberturadoSolo_5_RemanescentedeVegetacaoNativa3.png" /></td><td>Remanescente de Vegetacao Nativa</td></tr></table>', layer: layer_CoberturadoSolo_5},
+            {label: "NDVI nov25", layer: layer_NDVInov25_4},
+            {label: "NDVI fev26", layer: layer_NDVIfev26_3},
+            {label: "NDVI jul26", layer: layer_NDVIjul26_2},
+            {label: "Google Satellite", layer: layer_GoogleSatellite_1},
             {label: "Google Hybrid", layer: layer_GoogleHybrid_0, radioGroup: 'bm' },]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
